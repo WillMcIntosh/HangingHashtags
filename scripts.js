@@ -1,6 +1,6 @@
 window.addEventListener("load", function() {
   // store all folder tabs as array
-  const folderTabs = document.querySelectorAll("ul.nav-tabs > li");
+  const folderTabs = document.getElementById("folder-tabs").querySelectorAll("ul.nav-tabs > li");
 
   function tabClicked(event) {
     event.preventDefault(); // prevent URL from changing
@@ -15,7 +15,7 @@ window.addEventListener("load", function() {
     clickedTab.classList.add("active");
 
     // store all contents in array
-    const folderContents = document.querySelectorAll(".tab-pane");
+    const folderContents = document.getElementById("folder-content").querySelectorAll(".tab-pane");
 
     // remove active class from all contents
     for (content of folderContents) {
