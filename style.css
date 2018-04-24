@@ -7,3 +7,8 @@
   height: 24px;
   width: 24px;
 }
+
+.white-box {
+  background-color: white;
+  padding: 15px;
+}
