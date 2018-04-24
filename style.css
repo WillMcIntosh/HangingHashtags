@@ -1,12 +1,16 @@
 .jumbotron {
   padding-left: 24px;
   padding-right: 24px;
+  background-color: #545759;
+  color: #FFFFFF;
 }
 
 .custom-logo {
   height: 24px;
   width: 24px;
+  margin: 24px 12px 24px 0px;
 }
+
 .logo-image {
   float: left;
   display: table-cell;
@@ -25,11 +29,11 @@
   background-color: white;
   padding: 15px;
   margin: 10px;
+  color: #000000;
 }
 
-.grey-box {
-  background-color: #286090;
-  color: #FFFFFF;
+.blue-box {
+  background-color: #63A1D3;
   padding: 5px;
   border: 1px solid black;
 }
@@ -176,6 +180,7 @@ a {
   height: 35px;
   border-radius: 50%;
   display: block;
+  margin: 17px 10px 17px 10px;
 }
 
 .video-responsive{
