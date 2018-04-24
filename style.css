@@ -34,6 +34,12 @@
   border: 1px solid black;
 }
 
+.dark-box {
+  background-color: #444242;
+  color: white;
+  padding: 2px;
+}
+
 .grey-margin {
   margin-right: 5px;
   margin-top: 5px;
