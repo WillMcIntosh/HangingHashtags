@@ -12,3 +12,12 @@
   background-color: white;
   padding: 15px;
 }
+
+/* for both folder tabs and comment section */
+.tab-pane {
+  display: none;
+}
+
+.active {
+  display: block;
+}

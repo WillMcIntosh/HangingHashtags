@@ -70,6 +70,35 @@
 
     <!-- split page using bootstrap column 9 to 3 -->
 
+    <div class="container-fluid">
+    <!-- create column for tabbed sections and comments -->
+      <div class="col-md-9">
+        <!-- Tabbed section -->
+        <div id="folder-tabs" class="folder-tabs">
+          <div class="row">
+            <!-- list to make tab selectors -->
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#about">About</a></li>
+              <li class=""><a href="#activity-plan">Activity Plan</a></li>
+              <li class=""><a href="#examples">Examples</a></li>
+            </ul>
+            <!-- elements to render based on active tab -->
+            <div id="folder-content" class="folder-content">
+              <div id="about" class="tab-pane active">
+                <h3>About Section</h3>
+              </div>
+              <div id="activity-plan" class="tab-pane">
+                <h3>Activity Plan</h3>
+              </div>
+              <div id="examples" class="tab-pane">
+                <h3>Examples</h3>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+
     <!-- 9 column for tabbed sections and comments -->
     
     <!-- 3 column for video, support section -->
