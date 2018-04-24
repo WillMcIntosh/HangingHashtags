@@ -15,7 +15,8 @@
 }
 
 .grey-box {
-  background-color: grey;
+  background-color: #286090;
+  color: #FFFFFF;
   padding: 5px;
   border: 1px solid black;
 }
@@ -41,6 +42,32 @@
 }
 .active {
   display: block;
+}
+
+/* underline all hyperlinks */
+a {
+  text-decoration: underline;
+  color: #0645AD;
+}
+
+/* except in tab panes */
+.nav-tabs a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+/* success and alert colors */
+.success-text {
+  color: green;
+}
+
+.alert-text {
+  color: orange;
+}
+
+.download-text {
+  color: #0645AD;
 }
 
 /* for aligning search icon to left https://stackoverflow.com/a/18839305 */
