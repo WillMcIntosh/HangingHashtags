@@ -32,6 +32,10 @@ h2,h3 {
   clear: both;
 }
 
+.dropdown {
+  margin-right: 5px;
+}
+
 .internal-tab {
   padding: 10px;
 }
