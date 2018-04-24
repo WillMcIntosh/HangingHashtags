@@ -32,6 +32,10 @@ h2,h3 {
   clear: both;
 }
 
+.internal-tab {
+  padding: 10px;
+}
+
 .white-box {
   background-color: white;
   padding: 15px;

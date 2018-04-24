@@ -136,7 +136,7 @@
                 </div>
               </div>
               <!-- Activty Plan Section -->
-              <div id="activity-plan" class="tab-pane">
+              <div id="activity-plan" class="tab-pane internal-tab">
                 <h3><i class="fas fa-book"></i> Before Lesson</h3>
                 <p>Select and post an image --without words-- for the activity.
                   Consider using photographs, magazine clippings, cartoons,
@@ -201,44 +201,46 @@
                 </ol>
               </div>
               <div id="examples" class="tab-pane">
-                <!-- dropdown buttons for selecting grade and subject -->
-                <div class="row">
-                  <div class="dropdown pull-left">
-                    <button class="btn btn-primary dropdown-toggle"
-                            type="button"
-                            id="grades-menu"
-                            data-toggle="dropdown">Grades <span
-                            id="examples-grades-btn-text">3-5 </span>
-                            <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="examples-grades-menu">
-                      <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                 href="#">3-5</a></li>
-                      <li role="presentation"><a  role="menuitem" tabindex="-1"
-                                                                  href="#">6-8</a></li>
-                    </ul>
+                <div class="internal-tab">
+                  <div class="row">
+                    <div class="dropdown pull-left">
+                      <button class="btn btn-primary dropdown-toggle"
+                              type="button"
+                              id="grades-menu"
+                              data-toggle="dropdown">Grades <span
+                              id="examples-grades-btn-text">3-5 </span>
+                              <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="examples-grades-menu">
+                        <li role="presentation"><a role="menuitem" tabindex="-1"
+                                                                   href="#">3-5</a></li>
+                        <li role="presentation"><a  role="menuitem" tabindex="-1"
+                                                                    href="#">6-8</a></li>
+                      </ul>
+                    </div>
+                    <div class="dropdown pull-left">
+                      <button class="btn btn-primary dropdown-toggle"
+                              type="button"
+                              id="subject-menu"
+                              data-toggle="dropdown">Subject <span
+                              id="examples-subject-btn-text">Math </span>
+                              <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu"
+                                                aria-labelledby="examples-subjects-menu">
+                        <li role="presentation"><a role="menuitem" tabindex="-1"
+                                                                   href="#">Math</a></li>
+                        <li role="presentation"><a  role="menuitem" tabindex="-1"
+                                                                    href="#">Reading</a></li>
+                      </ul>
+                    </div>
                   </div>
-                  <div class="dropdown pull-left">
-                    <button class="btn btn-primary dropdown-toggle"
-                            type="button"
-                            id="subject-menu"
-                            data-toggle="dropdown">Subject <span
-                            id="examples-subject-btn-text">Math </span>
-                            <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu"
-                                              aria-labelledby="examples-subjects-menu">
-                      <li role="presentation"><a role="menuitem" tabindex="-1"
-                                                                 href="#">Math</a></li>
-                      <li role="presentation"><a  role="menuitem" tabindex="-1"
-                                                                  href="#">Reading</a></li>
-                    </ul>
-                  </div>
+                  <!-- add spans so javascript (jquery) can change contents via dropdown -->
+                  <h3><span id="examples-grade-level">3-5</span>
+                    <span id="examples-subject">Math</span>
+                  </h3>
                 </div>
-                <!-- add spans so javascript (jquery) can change contents via dropdown -->
-                <h3><span id="examples-grade-level">3-5</span>
-                  <span id="examples-subject">Math</span>
-                </h3>
+                <!-- dropdown buttons for selecting grade and subject -->
                 <div class="row blue-box">
                   <div class="col-md-6">
                     <h4>Content Objective:</h4>
@@ -251,21 +253,23 @@
                       prepositions.</p>
                   </div>
                 </div>
-                <p>Teacher will place a variety of images from magazines that
-                  show a volume in a variety of ways: drink containers,
-                  swimming pools, beakers, and boxes/cubes.</p>
-                <p>Teacher will explain to the students that they will be
-                  adding descriptive words in the form of hashtags for how much
-                  and what is being displayed in each image.</p>
-                <p>Working in small groups, students will rotate from image to
-                  image, discussing what they see and work to add hashtags
-                  describing how much there is.</p>
-                <p>Gathering students and images together, the teacher will
-                  guide a discussion on the basics of volume, building on the
-                  student contributions to the images and dispelling
-                  misconceptions.</p>
-                <p>The teacher will continue with the lesson on recognizing
-                  volume as an attribute of solid figures.</p>
+                <div class="internal-tab">
+                  <p>Teacher will place a variety of images from magazines that
+                    show a volume in a variety of ways: drink containers,
+                    swimming pools, beakers, and boxes/cubes.</p>
+                  <p>Teacher will explain to the students that they will be
+                    adding descriptive words in the form of hashtags for how much
+                    and what is being displayed in each image.</p>
+                  <p>Working in small groups, students will rotate from image to
+                    image, discussing what they see and work to add hashtags
+                    describing how much there is.</p>
+                  <p>Gathering students and images together, the teacher will
+                    guide a discussion on the basics of volume, building on the
+                    student contributions to the images and dispelling
+                    misconceptions.</p>
+                  <p>The teacher will continue with the lesson on recognizing
+                    volume as an attribute of solid figures.</p>
+                </div>
               </div>
             </div>
           </div> 
