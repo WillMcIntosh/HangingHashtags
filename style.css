@@ -51,6 +51,12 @@
   margin-left: 20px;
 }
 
+/* add border to folder */
+
+.folder-tabs {
+  border: 1px solid #cecccc;
+}
+
 /* prevent negative margins on grey box and other rows */
 .row {
   margin: 0;
