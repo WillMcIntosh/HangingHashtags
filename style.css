@@ -35,3 +35,15 @@
     width:100%;
     position:absolute;
 }
+
+table {
+  width: 100%;
+}
+table, th, td, tr {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.top-table {
+  margin-top: 10px;
+}
