@@ -7,6 +7,19 @@
   height: 24px;
   width: 24px;
 }
+.logo-image {
+  float: left;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.logo-text {
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
 
 .white-box {
   background-color: white;
@@ -59,15 +72,19 @@ a {
 
 /* success and alert colors */
 .success-text {
-  color: green;
+  color: #A9B893;
 }
 
 .alert-text {
-  color: orange;
+  color: #C48F6B;
 }
 
 .download-text {
-  color: #0645AD;
+  color: #669CE1;
+}
+
+.greyed {
+  color: #a0a0a0;
 }
 
 /* for aligning search icon to left https://stackoverflow.com/a/18839305 */
