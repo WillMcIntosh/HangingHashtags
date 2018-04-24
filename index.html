@@ -107,7 +107,7 @@
                     the shared and divergent words and ideas.</p>
                 </div>
                 <div class="col-md-3">
-                  <div class="grey-box">
+                  <div class="grey-box grey-margin">
                     <h3><i class="fas fa-bullhorn"></i> Reading</h3>
                     <p class="bolded">Speaking, Listening</p>
                   </div>
@@ -270,7 +270,56 @@
             <!-- elements of comment section -->
             <div id="comment-content" class="comment-content">
               <div id="comments" class="tab-pane active">
-                <h2>Comments</h2>
+                <div class="row">
+                  <div class="col-md-3 col-sm-6">
+                    <!-- from stackoverflow for aligning my icon to the left -->
+                    <div class="form-group has-feedback has-feedback-left">
+                      <input type="text" class="form-control"
+                                         placeholder="Search Content">
+                      <i class="glyphicon glyphicon-search
+                      form-control-feedback"></i>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-0">
+                    <!-- spacer column -->
+                  </div>
+                  <div class="col-md-6">
+                    <div class="dropdown pull-right">
+                      <button class="btn btn-primary dropdown-toggle"
+                              type="button"
+                              id="comment-filter"
+                              data-toggle="dropdown">Newest <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu"
+                                                aria-labelledby="comment-menu">
+                        <li role="presentation"><a role="menuitem" tabindex="-1"
+                                                                   href="#">Newest</a></li>
+                        <li role="presentation"><a  role="menuitem" tabindex="-1"
+                                                                    href="#">Top</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="sample-comment">
+                  <div class="comment-image clearfix">
+                    <!-- github default user image -->
+                    <img src="images/userpic.png" alt="user image"
+                                                  class="profile-pic">
+                  </div>
+                  <div class="comment-text">
+                    <p>
+                      <strong>KAREN I EARL</strong>
+                      (Syracuse City Schools)
+                      <small>a year ago</small>
+                    </p>
+                    <p>Works well if you group low support with high support for
+                      second part of activity.</p>
+                    <p class="likes">
+                      <i class="far fa-thumbs-up"></i> 
+                      <span id="likes">12</span>
+                    </p>
+                  </div>
+                </div>
               </div>
               <div id="private-notes" class="tab-pane">
                 <h2>Private Notes</h2>
