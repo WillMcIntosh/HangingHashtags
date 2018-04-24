@@ -14,7 +14,7 @@
           integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
           crossorigin="anonymous">
 
-<!-- jquery and bootstrap js for dropdown menus -->
+    <!-- jquery and bootstrap js for dropdown menus -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -72,12 +72,12 @@
       </div>
     </div>
 
-    <!-- split page using bootstrap column 9 to 3 -->
+    <!-- split page using bootstrap column 8 to 4 -->
 
     <div class="container-fluid">
-      <!-- 9 column for tabbed sections and comments -->
+      <!-- 8 column for tabbed sections and comments -->
       <!-- create column for tabbed sections and comments -->
-      <div class="col-md-9">
+      <div class="col-md-8">
         <!-- Tabbed section -->
         <div id="folder-tabs" class="folder-tabs">
           <div class="row">
@@ -90,7 +90,7 @@
             <!-- elements to render based on active tab -->
             <div id="folder-content" class="folder-content">
               <div id="about" class="tab-pane active">
-                <div class="col-md-9">
+                <div class="col-md-8">
                   <h3><i class="fas fa-bullseye"></i> Objective</h3>
                   <p class="bolded">Students will write short phrases related to their
                     background knowledge, experiences, and assumptions about an
@@ -106,7 +106,7 @@
                     around the image as a "frame." A final discussion occurs around
                     the shared and divergent words and ideas.</p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                   <div class="grey-box grey-margin">
                     <h3><i class="fas fa-bullhorn"></i> Reading</h3>
                     <p class="bolded">Speaking, Listening</p>
@@ -328,9 +328,9 @@
           </div>
         </div>
       </div>
-      <!-- 3 column for video, support section -->
+      <!-- 4 column for video, support section -->
       <!-- create column for video, support section -->
-      <div class="col-md-3">
+      <div class="col-md-4">
         <div class="video-responsive">
           <iframe width="200" height="112" src="https://www.youtube.com/embed/8tPnX7OPo0Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
@@ -346,7 +346,8 @@
         <!-- html table for support info -->
         <table class="top-table">
           <tr>
-            <th>High Support</th>
+            <th><div class="support-levels">High Support: Speaking 1 & 2</div>
+              <div class="student-number"><a href="#">8 Students</a></div></th>
           </tr>
           <tr>
             <td>
@@ -359,7 +360,8 @@
         </table>
         <table>
           <tr>
-            <th>Moderate Support</th>
+            <th><div class="support-levels">Moderate Support: Speaking 3 & 4</div>
+              <div class="student-number"><a href="#">3 Students</a></div></th>
           </tr>
           <tr>
             <td>
@@ -372,7 +374,8 @@
         </table>
         <table>
           <tr>
-            <th>Low Support</th>
+            <th><div class="support-levels">Low Support: Speaking 5 & 6</div>
+              <div class="student-number"><a href="#">4 Students</a></div></th>
           </tr>
           <tr>
             <td>
@@ -383,10 +386,7 @@
           </tr>
         </table>
       </div>
-
     </div>
-
-
 
     <script src="scripts.js"></script>
   </body>

@@ -139,6 +139,14 @@
 table {
   width: 100%;
 }
+table .support-levels {
+  float: left;
+  text-align: left;
+}
+table .student-number {
+  float: right;
+  text-align: right;
+}
 table, th, td, tr {
   border: 1px solid black;
   border-collapse: collapse;
