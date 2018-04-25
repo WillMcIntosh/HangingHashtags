@@ -140,18 +140,31 @@ function hideWarning() {
 }
 
 function filterChange(event) {
+  event.preventDefault();
   const filterChoice = event.currentTarget;
   const choiceID = filterChoice.id;
 
+  const highSupport = document.getElementById("high-support");
+  const medSupport = document.getElementById("moderate-support");
+  const lowSupport = document.getElementById("low-support");
+
   switch (choiceID) {
     case "all":
-      console.log("all");
+      // default values
+      highSupport.innerHTML = "8";
+      medSupport.innerHTML = "3";
+      lowSupport.innerHTML = "4";
       break;
     case "third-grade":
-      console.log("3rd");
+      // hard coded values for example
+      highSupport.innerHTML = "5";
+      medSupport.innerHTML = "3";
+      lowSupport.innerHTML = "2";
       break;
     case "fourth-grade":
-      console.log("4th");
+      highSupport.innerHTML = "3";
+      medSupport.innerHTML = "0";
+      lowSupport.innerHTML = "2";
       break;
     default: 
       break;
