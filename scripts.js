@@ -84,13 +84,13 @@ function submitComment(event) {
   // prepend comment info to ul in comments
   const node = document.createElement("li");
   const newDiv = document.createElement("div");
-  newDiv.setAttribute("class","sample-comment col-xs-12");
-  newDiv.innerHTML = `<div class="comment-image clearfix"> \
+  newDiv.setAttribute("class","sample-comment");
+  newDiv.innerHTML = `<div class="comment-image col-xs-1 clearfix"> \
                         <!-- github default user image --> \
                         <img src="images/userpic.png" alt="user image" \
                                                       class="profile-pic"> \
                       </div> \
-                      <div class="comment-text"> \
+                      <div class="comment-text col-xs-11"> \
                         <p> \
                           <strong>${userName}</strong> \
                           (Syracuse City Schools) \
