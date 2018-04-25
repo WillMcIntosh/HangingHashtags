@@ -145,7 +145,7 @@ function incrementCommentCounts() {
   let totalInt = parseInt(totalString.innerHTML);
   let publicString = document.getElementById("public-comments");
   let publicInt = parseInt(publicString.innerHTML);
-  let privateString = document.getElementById("private-notes");
+  let privateString = document.getElementById("private-notes-number");
   let privateInt = parseInt(privateString.innerHTML);
 
   publicInt++;
@@ -242,8 +242,36 @@ const students =
 
 
 function supportView() {
+  const supportTable = document.getElementById("table-location");
   const highSupport = students.filter(student => student.support == "high");
-  console.table(highSupport);
-  console.table(students);
-}
 
+  // console.table(highSupport);
+  // console.table(students);
+  let result = `<table border=1>
+                  <tr>
+                    <th>Student</th> 
+                    <th>Grade</th> 
+                    <th>Support Level</th> 
+                  </tr>`;
+  for (student of students) {
+    result += `<tr>
+    <td>${student.name}</td>
+    <td>${student.grade}</td>
+    <td>${student.support}</td>
+      </tr>`
+  }
+  result += "</table>";
+  
+  // for (let row = 0; row < students.length; row++) {
+  //   result += "<tr>";
+  //   for (let col = 0; col < students[row].length; col++) {
+  //     result += "<td>"+students[row][col]+ "</td>";
+  //   }
+  //   result += "</tr>";
+  // }
+  // result += "</table>";
+
+  const newDiv = document.createElement("div");
+  newDiv.innerHTML = result;
+  supportTable.appendChild(newDiv); // add to modal 
+}
