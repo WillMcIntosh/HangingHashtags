@@ -73,33 +73,36 @@ function toggleCommentBox(event) {
 
 function submitComment(event) {
   event.preventDefault();
+  // TODO: validate form before proceeding
+  
+  // add form contents to variables
+  const userName = document.getElementById("new-comment-form").userName.value;
+  const userComment = document.getElementById("new-comment-form").newComment.value;
+
+  userName.toUpperCase();
+
   // prepend comment info to ul in comments
-  // const node = document.createElement("li");
-  // const newDiv = document.createElement("div");
-  // const nodeContents = document.createTextNode("Hello");
-  // newDiv.appendChild(nodeContents);
-  // node.appendChild(newDiv);
   const node = document.createElement("li");
   const newDiv = document.createElement("div");
   newDiv.setAttribute("class","sample-comment col-xs-12");
-  newDiv.innerHTML = "<div class='comment-image clearfix'> \
+  newDiv.innerHTML = `<div class="comment-image clearfix"> \
                         <!-- github default user image --> \
-                        <img src='images/userpic.png' alt='user image' \
-                                                      class='profile-pic'> \
+                        <img src="images/userpic.png" alt="user image" \
+                                                      class="profile-pic"> \
                       </div> \
-                      <div class='comment-text'> \
+                      <div class="comment-text"> \
                         <p> \
-                          <strong>BECKY I EARL</strong> \
+                          <strong>${userName}</strong> \
                           (Syracuse City Schools) \
-                          <small>a year ago</small> \
+                          <small>just now</small> \
                         </p> \
-                        <p>Works well if you group low support with high support for \
-                          second part of activity.</p> \
-                        <p class='likes'> \
-                          <i class='far fa-thumbs-up'></i> \
-                          <span id='likes'>12</span> \
+                        <p> ${userComment}\
+                          </p> \
+                        <p class="likes"> \
+                          <i class="far fa-thumbs-up"></i> \
+                          <span id="likes">12</span> \
                         </p> \
-                      </div>";
+                      </div>`;
 
   node.appendChild(newDiv);
   const first = document.getElementById("comment-list").getElementsByTagName("li")[0];
