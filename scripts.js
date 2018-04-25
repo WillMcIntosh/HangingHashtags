@@ -6,6 +6,9 @@ const commentTabs = document.getElementById("comment-tabs").querySelectorAll("ul
 const folderContents = document.getElementById("folder-content").querySelectorAll(".tab-pane");
 const commentContents = document.getElementById("comment-content").querySelectorAll(".tab-pane");
 
+// store student filter choices in array
+const studentFilters = document.getElementById("filter-menu").querySelectorAll("li");
+
 // event listeners for tab clicks
 for (tab of folderTabs) {
   tab.addEventListener("click", tabClicked);
@@ -13,6 +16,11 @@ for (tab of folderTabs) {
 
 for (tab of commentTabs) {
   tab.addEventListener("click", tabClicked);
+}
+
+// event listener for filter clicks
+for (student of studentFilters) {
+  student.addEventListener("click", filterChange);
 }
 
 // event listener for comment form
@@ -129,4 +137,23 @@ function showWarning() {
 function hideWarning() {
   const warningText = document.getElementById("comment-form-warning");
   warningText.style.display = "none";
+}
+
+function filterChange(event) {
+  const filterChoice = event.currentTarget;
+  const choiceID = filterChoice.id;
+
+  switch (choiceID) {
+    case "all":
+      console.log("all");
+      break;
+    case "third-grade":
+      console.log("3rd");
+      break;
+    case "fourth-grade":
+      console.log("4th");
+      break;
+    default: 
+      break;
+  }
 }

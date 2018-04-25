@@ -62,7 +62,7 @@
                                                                to...</a></li>
                   </ul>
                 </div>
-                <button type="button" class="btn btn-primary">
+                <button type="button" id="share-button" class="btn btn-primary">
                   <i class="fas fa-share"></i> Share &nbsp;
                   <span class="dark-box">30</span>
                 </button>
@@ -381,19 +381,32 @@
           <iframe width="200" height="112" src="https://www.youtube.com/embed/8tPnX7OPo0Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
         <h3>Support Levels</h3>
-        <button type="button" class="btn btn-primary">
-          Show Filters
-          <i class="fas fa-sort-down"></i>
-        </button>
-        <button type="button" class="btn btn-primary pull-right">
-          <i class="far fa-thumbs-up"></i>
-          Batch Recommend
-        </button>
+        <div class="row">
+          <div class="dropdown pull-left">
+            <button type="button" class="btn btn-primary
+            dropdown-toggle" id="filter-button"
+                             data-toggle="dropdown">
+              Show Filters <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" id="filter-menu" role="menu"
+                                      aria-labelledby="student-filter-menu">
+
+              <li id="all"><a href="#" role="menuitem" tabindex="-1">All Grades</a></li>
+              <li id="third-grade"><a href="#"  role="menuitem" tabindex="-1">3rd Grade</a></li>
+              <li id="fourth-grade"><a href="#"  role="menuitem" tabindex="-1">4th Grade</a></li>
+            </ul>
+          </div>
+          <button type="button" class="btn btn-primary pull-right">
+            <i class="far fa-thumbs-up"></i>
+            Batch Recommend
+          </button>
+        </div>
         <!-- html table for support info -->
         <table class="top-table">
           <tr>
             <th><div class="support-levels">High Support: Speaking 1 & 2</div>
-              <div class="student-number"><a href="#">8 Students</a></div></th>
+              <div class="student-number"><a href="#"><span
+                    id="high-support">8</span> Students</a></div></th>
           </tr>
           <tr>
             <td class="blue-box">
@@ -407,7 +420,8 @@
         <table>
           <tr>
             <th><div class="support-levels">Moderate Support: Speaking 3 & 4</div>
-              <div class="student-number"><a href="#">3 Students</a></div></th>
+              <div class="student-number"><a href="#"><span
+                    id="moderate-support">3</span> Students</a></div></th>
           </tr>
           <tr>
             <td class="blue-box">
@@ -421,7 +435,7 @@
         <table>
           <tr>
             <th><div class="support-levels">Low Support: Speaking 5 & 6</div>
-              <div class="student-number"><a href="#">4 Students</a></div></th>
+              <div class="student-number"><a href="#"><span id="low-support">4</span> Students</a></div></th>
           </tr>
           <tr>
             <td class="blue-box">
