@@ -73,7 +73,39 @@ function toggleCommentBox(event) {
 
 function submitComment(event) {
   event.preventDefault();
-  alert("hi");
+  // prepend comment info to ul in comments
+  // const node = document.createElement("li");
+  // const newDiv = document.createElement("div");
+  // const nodeContents = document.createTextNode("Hello");
+  // newDiv.appendChild(nodeContents);
+  // node.appendChild(newDiv);
+  const node = document.createElement("li");
+  const newDiv = document.createElement("div");
+  newDiv.setAttribute("class","sample-comment");
+  newDiv.innerHTML = "<div class='comment-image clearfix'> \
+                        <!-- github default user image --> \
+                        <img src='images/userpic.png' alt='user image' \
+                                                      class='profile-pic'> \
+                      </div> \
+                      <div class='comment-text'> \
+                        <p> \
+                          <strong>KAREN I EARL</strong> \
+                          (Syracuse City Schools) \
+                          <small>a year ago</small> \
+                        </p> \
+                        <p>Works well if you group low support with high support for \
+                          second part of activity.</p> \
+                        <p class='likes'> \
+                          <i class='far fa-thumbs-up'></i> \
+                          <span id='likes'>12</span> \
+                        </p> \
+                      </div>";
+
+  node.appendChild(newDiv);
+  const first = document.getElementById("first-comment");
+
+  document.getElementById("comment-list").insertBefore(node, first);
+  
   clearCommentBox();
   toggleCommentBox();
 }
