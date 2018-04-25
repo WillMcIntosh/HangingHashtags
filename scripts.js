@@ -32,7 +32,9 @@ const commentSubmitButton = document.getElementById("comment-submit-button");
 commentSubmitButton.addEventListener("click", submitComment);
 
 function tabClicked(event) {
-  event.preventDefault(); // prevent URL from changing
+  // prevent URL from changing
+  // added for IE compatibility
+  event.preventDefault ? event.preventDefault() : (event.returnValue = false);
   // define tab clicked
   const clickedTab = event.currentTarget;
   // find parent of tab clicked to find if classList contains comments or folders
@@ -69,7 +71,6 @@ function tabClicked(event) {
 }
 
 function toggleCommentBox(event) {
-  // event.preventDefault();
   const commentForm = document.getElementById("new-comment-box");
   if (commentForm.style.display === "block") {
     commentForm.style.display = "none";
@@ -81,8 +82,7 @@ function toggleCommentBox(event) {
 }
 
 function submitComment(event) {
-  event.preventDefault();
-  // TODO: validate form before proceeding
+  event.preventDefault ? event.preventDefault() : (event.returnValue = false);
   
   // add form contents to variables
   const userName = document.getElementById("new-comment-form").userName.value.toUpperCase();
