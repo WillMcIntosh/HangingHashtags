@@ -81,7 +81,7 @@ function submitComment(event) {
   // node.appendChild(newDiv);
   const node = document.createElement("li");
   const newDiv = document.createElement("div");
-  newDiv.setAttribute("class","sample-comment");
+  newDiv.setAttribute("class","sample-comment col-xs-12");
   newDiv.innerHTML = "<div class='comment-image clearfix'> \
                         <!-- github default user image --> \
                         <img src='images/userpic.png' alt='user image' \
@@ -89,7 +89,7 @@ function submitComment(event) {
                       </div> \
                       <div class='comment-text'> \
                         <p> \
-                          <strong>KAREN I EARL</strong> \
+                          <strong>BECKY I EARL</strong> \
                           (Syracuse City Schools) \
                           <small>a year ago</small> \
                         </p> \
