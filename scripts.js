@@ -9,6 +9,9 @@ const commentContents = document.getElementById("comment-content").querySelector
 // store student filter choices in array
 const studentFilters = document.getElementById("filter-menu").querySelectorAll("li");
 
+// store email filter choices in array
+const emailRecipients = document.getElementById("email-choices").querySelectorAll("li");
+
 // event listeners for tab clicks
 for (tab of folderTabs) {
   tab.addEventListener("click", tabClicked);
@@ -21,6 +24,11 @@ for (tab of commentTabs) {
 // event listener for filter clicks
 for (student of studentFilters) {
   student.addEventListener("click", filterChange);
+}
+
+// event listener for email choices
+for (recipient of emailRecipients) {
+  recipient.addEventListener("click", emailChoice);
 }
 
 // event listener for comment form
@@ -169,4 +177,26 @@ function filterChange(event) {
     default: 
       break;
   }
+}
+
+function emailChoice() {
+  const emailRecipient = event.currentTarget;
+  const choiceID = emailRecipient.id;
+
+  const customEmail = document.getElementById("custom-email");
+
+  switch (choiceID) {
+    case "mark":
+      customEmail.value = "mark@email.com";
+      break;
+    case "karen":
+      customEmail.value = "karen@email.com";
+      break;
+    case "kelleigh":
+      customEmail.value = "kelleigh@email.com";
+      break;
+    default:
+      break;
+  }
+
 }
