@@ -276,7 +276,7 @@
         </div>
         <!-- comment indicator and new comment button -->
         <div class="row">
-          <h3>Comments (20)</h3>
+          <h3>Comments (<span id="total-comments">20</span>)</h3>
           <button type="button" class="btn btn-primary">
             <i class="fas fa-comment"></i> Add New Comment
           </button>
@@ -310,7 +310,7 @@
                       <button class="btn btn-primary dropdown-toggle"
                               type="button"
                               id="comment-filter"
-                              data-toggle="dropdown">Newest <span class="caret"></span>
+                              data-toggle="dropdown">Newest &nbsp;&nbsp; <span class="caret"></span>
                       </button>
                       <ul class="dropdown-menu" role="menu"
                                                 aria-labelledby="comment-menu">
@@ -322,26 +322,30 @@
                     </div>
                   </div>
                 </div>
-                <div class="sample-comment">
-                  <div class="comment-image clearfix">
-                    <!-- github default user image -->
-                    <img src="images/userpic.png" alt="user image"
-                                                  class="profile-pic">
-                  </div>
-                  <div class="comment-text">
-                    <p>
-                      <strong>KAREN I EARL</strong>
-                      (Syracuse City Schools)
-                      <small>a year ago</small>
-                    </p>
-                    <p>Works well if you group low support with high support for
-                      second part of activity.</p>
-                    <p class="likes">
-                      <i class="far fa-thumbs-up"></i> 
-                      <span id="likes">12</span>
-                    </p>
-                  </div>
-                </div>
+                <ul class="list-unstyled">
+                  <li>
+                    <div class="sample-comment">
+                      <div class="comment-image clearfix">
+                        <!-- github default user image -->
+                        <img src="images/userpic.png" alt="user image"
+                                                      class="profile-pic">
+                      </div>
+                      <div class="comment-text">
+                        <p>
+                          <strong>KAREN I EARL</strong>
+                          (Syracuse City Schools)
+                          <small>a year ago</small>
+                        </p>
+                        <p>Works well if you group low support with high support for
+                          second part of activity.</p>
+                        <p class="likes">
+                          <i class="far fa-thumbs-up"></i> 
+                          <span id="likes">12</span>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
               <div id="private-notes" class="tab-pane">
                 <h2>Private Notes</h2>
