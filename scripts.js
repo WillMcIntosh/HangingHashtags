@@ -19,16 +19,9 @@ for (tab of commentTabs) {
 const addCommentButton = document.getElementById("add-comment-button");
 addCommentButton.addEventListener("click", toggleCommentBox);
 
-function toggleCommentBox(event) {
-  event.preventDefault();
-  const commentForm = document.getElementById("new-comment-form");
-  if (commentForm.style.display === "block") {
-    commentForm.style.display = "none";
-  }
-  else {
-    commentForm.style.display = "block";
-  }
-}
+// event listener for submit button
+const commentSubmitButton = document.getElementById("comment-submit-button");
+commentSubmitButton.addEventListener("click", submitComment);
 
 function tabClicked(event) {
   event.preventDefault(); // prevent URL from changing
@@ -67,3 +60,24 @@ function tabClicked(event) {
   activeContent.classList.add("active");
 }
 
+function toggleCommentBox(event) {
+  // event.preventDefault();
+  const commentForm = document.getElementById("new-comment-box");
+  if (commentForm.style.display === "block") {
+    commentForm.style.display = "none";
+  }
+  else {
+    commentForm.style.display = "block";
+  }
+}
+
+function submitComment(event) {
+  event.preventDefault();
+  alert("hi");
+  clearCommentBox();
+  toggleCommentBox();
+}
+
+function clearCommentBox() {
+  document.getElementById("new-comment-form").reset();
+}
