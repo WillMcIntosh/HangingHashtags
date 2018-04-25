@@ -127,6 +127,10 @@ a {
   display: none;
 }
 
+#comment-form-warning {
+  display: none;
+}
+
 /* for aligning search icon to left https://stackoverflow.com/a/18839305 */
 
 .has-feedback .form-control {

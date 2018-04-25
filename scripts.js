@@ -67,6 +67,7 @@ function toggleCommentBox(event) {
     commentForm.style.display = "none";
   }
   else {
+    hideWarning();
     commentForm.style.display = "block";
   }
 }
@@ -78,6 +79,11 @@ function submitComment(event) {
   // add form contents to variables
   const userName = document.getElementById("new-comment-form").userName.value.toUpperCase();
   const userComment = document.getElementById("new-comment-form").newComment.value;
+
+  if (userName.length == 0 || userComment.length == 0) {
+    showWarning();
+    return;
+  }
 
   // prepend comment info to ul in comments
   const node = document.createElement("li");
@@ -113,4 +119,14 @@ function submitComment(event) {
 
 function clearCommentBox() {
   document.getElementById("new-comment-form").reset();
+}
+
+function showWarning() {
+  const warningText = document.getElementById("comment-form-warning");
+    warningText.style.display = "block";
+}
+
+function hideWarning() {
+  const warningText = document.getElementById("comment-form-warning");
+  warningText.style.display = "none";
 }
