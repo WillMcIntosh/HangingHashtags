@@ -15,6 +15,21 @@ for (tab of commentTabs) {
   tab.addEventListener("click", tabClicked);
 }
 
+// event listener for comment form
+const addCommentButton = document.getElementById("add-comment-button");
+addCommentButton.addEventListener("click", toggleCommentBox);
+
+function toggleCommentBox(event) {
+  event.preventDefault();
+  const commentForm = document.getElementById("new-comment-form");
+  if (commentForm.style.display === "block") {
+    commentForm.style.display = "none";
+  }
+  else {
+    commentForm.style.display = "block";
+  }
+}
+
 function tabClicked(event) {
   event.preventDefault(); // prevent URL from changing
   // define tab clicked

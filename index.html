@@ -277,10 +277,28 @@
         <!-- comment indicator and new comment button -->
         <div class="row">
           <h3>Comments (<span id="total-comments">20</span>)</h3>
-          <button type="button" class="btn btn-primary">
+          <button type="button" id="add-comment-button" class="btn btn-primary">
             <i class="fas fa-comment"></i> Add New Comment
           </button>
         </div>
+        <!-- comment form -->
+        <div id="new-comment-form" class="row">
+          <form action="submit-comment">
+            <div class="col-xs-12">
+              <h4>Add New Comment</h4>
+            </div>
+            <div class="formgroup col-xs-4">
+              <label for="user">Name:</label>
+              <input id="user" class="form-control" type="text">
+            </div>
+            <div class="formgroup col-xs-12">
+              <label for="new-comment">Comment:</label>
+              <textarea id="new-comment" class="form-control" rows="5"></textarea>
+              <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+          </form>
+        </div>
+
         <!-- comment section -->
         <div id="comment-tabs" class="folder-tabs">
           <div class="row">
