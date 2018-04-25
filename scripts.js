@@ -102,7 +102,7 @@ function submitComment(event) {
                       </div>";
 
   node.appendChild(newDiv);
-  const first = document.getElementById("first-comment");
+  const first = document.getElementById("comment-list").getElementsByTagName("li")[0];
 
   document.getElementById("comment-list").insertBefore(node, first);
   
