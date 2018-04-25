@@ -39,6 +39,12 @@ addCommentButton.addEventListener("click", toggleCommentBox);
 const commentSubmitButton = document.getElementById("comment-submit-button");
 commentSubmitButton.addEventListener("click", submitComment);
 
+// event listener for batch recommend
+const batchRecommendButton = document.getElementById("batch-submit");
+batchRecommendButton.addEventListener("click", supportView);
+
+// event listener for student links
+
 function tabClicked(event) {
   // prevent URL from changing
   // added for IE compatibility
@@ -213,5 +219,31 @@ function emailChoice() {
     default:
       break;
   }
-
 }
+
+const students = 
+  [
+    {name:"Steve", grade:"3rd", support:"high"},
+    {name:"Steve", grade:"3rd", support:"high"},
+    {name:"Steve", grade:"3rd", support:"high"},
+    {name:"Steve", grade:"3rd", support:"high"},
+    {name:"Steve", grade:"3rd", support:"high"},
+    {name:"Steve", grade:"4th", support:"high"},
+    {name:"Steve", grade:"4th", support:"high"},
+    {name:"Steve", grade:"4th", support:"high"},
+    {name:"Steve", grade:"3rd", support:"moderate"},
+    {name:"Steve", grade:"3rd", support:"moderate"},
+    {name:"Steve", grade:"3rd", support:"moderate"},
+    {name:"Steve", grade:"3rd", support:"low"},
+    {name:"Steve", grade:"3rd", support:"low"},
+    {name:"Steve", grade:"4th", support:"low"},
+    {name:"Steve", grade:"4th", support:"low"}
+  ]
+
+
+function supportView() {
+  const highSupport = students.filter(student => student.support == "high");
+  console.table(highSupport);
+  console.table(students);
+}
+

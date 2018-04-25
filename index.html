@@ -143,9 +143,7 @@
         </div>
       </div>
     </div>
-
     <!-- split page using bootstrap column 8 to 4 -->
-
     <div class="container-fluid">
       <!-- 8 column for tabbed sections and comments -->
       <!-- create column for tabbed sections and comments -->
@@ -452,7 +450,8 @@
               <li id="fourth-grade"><a href="#"  role="menuitem" tabindex="-1">4th Grade</a></li>
             </ul>
           </div>
-          <button type="button" class="btn btn-primary pull-right">
+          <button type="button" class="btn btn-primary pull-right"
+            data-toggle="modal" data-target="#support-popup" id="batch-submit">
             <i class="far fa-thumbs-up"></i>
             Batch Recommend
           </button>
@@ -503,7 +502,30 @@
         </table>
       </div>
     </div>
-
+    <!-- Modal for Student Support Example -->
+    <div class="modal fade" id="support-popup" tabindex="-1" role="dialog"
+                                                             aria-labelledby="support-table" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="support-title">Student Support</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary"
+                                  data-dismiss="modal">Dismiss</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="scripts.js"></script>
   </body>
 </html>
