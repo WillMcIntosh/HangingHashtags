@@ -76,10 +76,8 @@ function submitComment(event) {
   // TODO: validate form before proceeding
   
   // add form contents to variables
-  const userName = document.getElementById("new-comment-form").userName.value;
+  const userName = document.getElementById("new-comment-form").userName.value.toUpperCase();
   const userComment = document.getElementById("new-comment-form").newComment.value;
-
-  userName.toUpperCase();
 
   // prepend comment info to ul in comments
   const node = document.createElement("li");
