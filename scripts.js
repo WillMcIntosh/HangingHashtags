@@ -128,9 +128,24 @@ function submitComment(event) {
   const first = document.getElementById("comment-list").getElementsByTagName("li")[0];
 
   document.getElementById("comment-list").insertBefore(node, first);
+  incrementCommentCounts();
   
   clearCommentBox();
   toggleCommentBox();
+}
+
+function incrementCommentCounts() {
+  let totalString = document.getElementById("total-comments");
+  let totalInt = parseInt(totalString.innerHTML);
+  let publicString = document.getElementById("public-comments");
+  let publicInt = parseInt(publicString.innerHTML);
+  let privateString = document.getElementById("private-notes");
+  let privateInt = parseInt(privateString.innerHTML);
+
+  publicInt++;
+  totalInt = publicInt + privateInt;
+  totalString.innerHTML = totalInt.toString();
+  publicString.innerHTML = publicInt.toString();
 }
 
 function clearCommentBox() {
