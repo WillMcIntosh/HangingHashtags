@@ -63,9 +63,9 @@
                   </ul>
                 </div>
                 <button type="button" id="share-button" 
-                  class="btn btn-primary"
-                  data-toggle="modal"
-                  data-target="#share-popup">
+                                      class="btn btn-primary"
+                                      data-toggle="modal"
+                                      data-target="#share-popup">
                   <i class="fas fa-share"></i> Share &nbsp;
                   <span class="dark-box">30</span>
                 </button>
@@ -98,10 +98,14 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Share content via email</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+            <div class="row">
+              <div class="col-xs-11">
+                <h3 class="modal-title">Share content via email</h3>
+              </div>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
           </div>
           <div class="modal-body">
             <div class="container-fluid">
@@ -137,7 +141,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary"
-              data-dismiss="modal">Cancel</button>
+                                  data-dismiss="modal">Cancel</button>
             <button type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
           </div>
         </div>
@@ -346,7 +350,7 @@
             <div class="formgroup col-xs-12">
               <label for="new-comment">Comment:</label>
               <textarea id="new-comment" class="form-control" name="newComment"
-                rows="5"></textarea>
+                                                              rows="5"></textarea>
               <p class="alert alert-danger" id="comment-form-warning">Please enter a Name and Comment</p>
               <button type="submit" id="comment-submit-button" class="btn btn-success">Submit</button>
             </div>
@@ -361,7 +365,7 @@
               <li class="active"><a href="#comments">Comments
                   (<span id="public-comments">1</span>)</a></li>
               <li class=""><a href="#private-notes">Private Notes (<span
-                    id="private-notes-number">19</span>)</a></li>
+                              id="private-notes-number">19</span>)</a></li>
             </ul>
             <!-- elements of comment section -->
             <div id="comment-content" class="comment-content">
@@ -443,7 +447,7 @@
               Show Filters <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" id="filter-menu" role="menu"
-                                      aria-labelledby="student-filter-menu">
+                                                       aria-labelledby="student-filter-menu">
 
               <li id="all"><a href="#" role="menuitem" tabindex="-1">All Grades</a></li>
               <li id="third-grade"><a href="#"  role="menuitem" tabindex="-1">3rd Grade</a></li>
@@ -504,7 +508,7 @@
                                                     id="low-link" 
                                                     data-toggle="modal"
                                                     data-target="#support-popup"><span 
-                                                      id="low-support">4</span>
+                                                    id="low-support">4</span>
                                                     Students</button></div></th>
             </tr>
             <tr>
@@ -524,10 +528,14 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="support-title">Student Support</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+            <div class="row">
+              <div class="col-xs-11">
+                <h3 class="modal-title" id="support-title">Student Support</h3>
+              </div>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
           </div>
           <div class="modal-body">
             <div class="container-fluid">
