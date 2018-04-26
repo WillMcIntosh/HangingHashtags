@@ -231,6 +231,8 @@ table {
 table .support-levels {
   float: left;
   text-align: left;
+  margin-top: 7px;
+  margin-left: 5px;
 }
 table .student-number {
   float: right;
@@ -240,6 +242,9 @@ table, th, td, tr {
   padding: 3px;
   border: 1px solid black;
   border-collapse: collapse;
+}
+table .blue-box {
+  padding-top: 7px;
 }
 .top-table {
   margin-top: 10px;
