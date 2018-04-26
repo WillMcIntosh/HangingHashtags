@@ -10,6 +10,6 @@ Should contain:
 * Proposed interaction for "Share" feature
   * `Share` button pops up a modal form with a dropdown of email recipients
 * Proposed Interaction for "Students" link - pop up table from json object
-  * `Show Filters` button is a dropdown to select between All, 4th, and 5th grade
+  * `Show Filters` button is a dropdown to select between All, 4th, and 3rd grade
   * `Batch Recommend` button shows all students for current grade filter
   * each student link shows students at that support level for the current grade filter
