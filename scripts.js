@@ -43,7 +43,7 @@ const batchRecommendButton = document.getElementById("batch-submit");
 batchRecommendButton.addEventListener("click", supportView);
 
 // store support links in array
-const supportLinks = document.getElementById("support-table").querySelectorAll("div.student-number > a");
+const supportLinks = document.getElementById("support-table").querySelectorAll("div.student-number > button");
 
 // event listener for student links
 for (supportLink of supportLinks) {
@@ -254,8 +254,10 @@ const students =
 
 
 function supportView(event) {
-  event.preventDefault ? event.preventDefault() : (event.returnValue = false);
+  // event.preventDefault ? event.preventDefault() : (event.returnValue = false);
   const supportTable = document.getElementById("table-location");
+  // clear html of supportTable
+  supportTable.innerHTML = "";
 
   const highSupport = students.filter(student => student.support == "high");
   const modSupport = students.filter(student => student.support == "moderate");
@@ -263,9 +265,10 @@ function supportView(event) {
 
   // determine which button called function for support levels
 
-  let chartStudents = students; // declare so it can be modified by filter choices
+  let chartStudents; // declare so it can be modified by filter choices
   const target = event.currentTarget;
   const targetID = target.id;
+
   switch (targetID) {
     case "high-link":
       chartStudents = highSupport;
@@ -277,14 +280,17 @@ function supportView(event) {
       chartStudents = lowSupport;
       break;
     default:
+      chartStudents = students;
       break;
   }
   // determine if grade filters active
   if (studentFilterChoice == 3) {
-    
+    chartStudents = chartStudents.filter(student => student.grade == "3rd");
   }
-  // console.table(highSupport);
-  // console.table(students);
+  else if (studentFilterChoice == 4) {
+    chartStudents = chartStudents.filter(student => student.grade == "4th");
+  }
+
   let result = `<table border=1>
                   <tr>
                     <th>Student</th> 
