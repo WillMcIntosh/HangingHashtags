@@ -6,6 +6,13 @@ for (recipient of emailRecipients) {
   recipient.addEventListener("click", emailChoice);
 }
 
+// event listeners for email buttons
+const emailButtons = document.getElementById("email-footer").querySelectorAll("button.email-button");
+
+for (button of emailButtons) {
+  button.addEventListener("click", clearEmailForm);
+}
+
 function emailChoice() {
   const emailRecipient = event.currentTarget;
   const choiceID = emailRecipient.id;
@@ -26,3 +33,8 @@ function emailChoice() {
       break;
   }
 }
+
+function clearEmailForm() {
+  document.getElementById("share-content").reset();
+}
+

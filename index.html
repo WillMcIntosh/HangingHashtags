@@ -109,40 +109,41 @@
           </div>
           <div class="modal-body">
             <div class="container-fluid">
-              <div class="row">
-                <div class="col-xs-3">
-                  <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-                      Select a Recipient
-                      <span class="caret"></span></button>
-                    <ul class="dropdown-menu" id="email-choices">
-                      <li id="mark"><a href="#">Mark</a></li>
-                      <li id="karen"><a href="#">Karen</a></li>
-                      <li id="kelleigh"><a href="#">Kelleigh</a></li>
-                    </ul>
+              <form id="share-content" action="send-email">
+                <div class="row">
+                  <div class="col-xs-3">
+                    <div class="dropdown">
+                      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                        Select a Recipient
+                        <span class="caret"></span></button>
+                      <ul class="dropdown-menu" id="email-choices">
+                        <li id="mark"><a href="#">Mark</a></li>
+                        <li id="karen"><a href="#">Karen</a></li>
+                        <li id="kelleigh"><a href="#">Kelleigh</a></li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-                <div class="col-xs-8 pull-right">
-                  <form id="email-entry" action="">
+                  <div class="col-xs-8 pull-right">
                     <div class="formgroup">
                       <input id="custom-email" type="text" class="form-control">
                     </div>
-                  </form>
-                </div>
-                <form id="share-content" action="email">
-                  <div class="formgroup col-xs-12">
-                    <label for="message">Enter a personal Message</label>
-                    <textarea id="message" class="form-control"
-                                           name="personal-message" rows="4"></textarea>
                   </div>
-                </form>
-              </div>
+                </div>
+                <div class="formgroup col-xs-12">
+                  <label for="message">Enter a personal Message</label>
+                  <textarea id="message" class="form-control"
+                                         name="personal-message" rows="4"></textarea>
+                </div>             
+              </form>
             </div>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary"
+          <div class="modal-footer" id="email-footer">
+            <button type="button" class="btn btn-secondary email-button"
+                                  id="email-cancel"
                                   data-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
+            <button type="button" class="btn btn-primary email-button"
+                                  id="email-send" 
+                                  data-dismiss="modal">Send</button>
           </div>
         </div>
       </div>
