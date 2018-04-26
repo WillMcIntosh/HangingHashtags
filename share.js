@@ -13,7 +13,7 @@ for (button of emailButtons) {
   button.addEventListener("click", clearEmailForm);
 }
 
-function emailChoice() {
+function emailChoice(event) {
   const emailRecipient = event.currentTarget;
   const choiceID = emailRecipient.id;
 
