@@ -2,6 +2,14 @@
 const folderTabs = document.getElementById("folder-tabs").querySelectorAll("ul.nav-tabs > li");
 const commentTabs = document.getElementById("comment-tabs").querySelectorAll("ul.nav-tabs > li");
 
+// event listeners for tab clicks
+for (tab of folderTabs) {
+  tab.addEventListener("click", tabClicked);
+}
+for (tab of commentTabs) {
+  tab.addEventListener("click", tabClicked);
+}
+
 // store contents in two arrays
 const folderContents = document.getElementById("folder-content").querySelectorAll(".tab-pane");
 const commentContents = document.getElementById("comment-content").querySelectorAll(".tab-pane");
@@ -9,22 +17,13 @@ const commentContents = document.getElementById("comment-content").querySelector
 // store student filter choices in array
 const studentFilters = document.getElementById("filter-menu").querySelectorAll("li");
 
-// store email filter choices in array
-const emailRecipients = document.getElementById("email-choices").querySelectorAll("li");
-
-// event listeners for tab clicks
-for (tab of folderTabs) {
-  tab.addEventListener("click", tabClicked);
-}
-
-for (tab of commentTabs) {
-  tab.addEventListener("click", tabClicked);
-}
-
 // event listener for filter clicks
 for (student of studentFilters) {
   student.addEventListener("click", filterChange);
 }
+
+// store email filter choices in array
+const emailRecipients = document.getElementById("email-choices").querySelectorAll("li");
 
 // event listener for email choices
 for (recipient of emailRecipients) {
@@ -43,7 +42,13 @@ commentSubmitButton.addEventListener("click", submitComment);
 const batchRecommendButton = document.getElementById("batch-submit");
 batchRecommendButton.addEventListener("click", supportView);
 
+// store support links in array
+const supportLinks = document.getElementById("support-table").querySelectorAll("div.student-number > a");
+
 // event listener for student links
+for (supportLink of supportLinks) {
+  supportLink.addEventListener("click", supportView);
+}
 
 function tabClicked(event) {
   // prevent URL from changing
@@ -168,6 +173,9 @@ function hideWarning() {
   warningText.style.display = "none";
 }
 
+// globally declare filter value for use in chart later
+let studentFilterChoice = 0;
+
 function filterChange(event) {
   event.preventDefault();
   const filterChoice = event.currentTarget;
@@ -183,21 +191,25 @@ function filterChange(event) {
       highSupport.innerHTML = "8";
       medSupport.innerHTML = "3";
       lowSupport.innerHTML = "4";
+      studentFilterChoice = 0;
       break;
     case "third-grade":
       // hard coded values for example
       highSupport.innerHTML = "5";
       medSupport.innerHTML = "3";
       lowSupport.innerHTML = "2";
+      studentFilterChoice = 3;
       break;
     case "fourth-grade":
       highSupport.innerHTML = "3";
       medSupport.innerHTML = "0";
       lowSupport.innerHTML = "2";
+      studentFilterChoice = 4;
       break;
     default: 
       break;
   }
+  console.log(studentFilterChoice);
 }
 
 function emailChoice() {
@@ -241,10 +253,36 @@ const students =
   ]
 
 
-function supportView() {
+function supportView(event) {
+  event.preventDefault ? event.preventDefault() : (event.returnValue = false);
   const supportTable = document.getElementById("table-location");
-  const highSupport = students.filter(student => student.support == "high");
 
+  const highSupport = students.filter(student => student.support == "high");
+  const modSupport = students.filter(student => student.support == "moderate");
+  const lowSupport = students.filter(student => student.support == "low");
+
+  // determine which button called function for support levels
+
+  let chartStudents = students; // declare so it can be modified by filter choices
+  const target = event.currentTarget;
+  const targetID = target.id;
+  switch (targetID) {
+    case "high-link":
+      chartStudents = highSupport;
+      break;
+    case "mod-link":
+      chartStudents = modSupport;
+      break;
+    case "low-link":
+      chartStudents = lowSupport;
+      break;
+    default:
+      break;
+  }
+  // determine if grade filters active
+  if (studentFilterChoice == 3) {
+    
+  }
   // console.table(highSupport);
   // console.table(students);
   let result = `<table border=1>
@@ -253,7 +291,7 @@ function supportView() {
                     <th>Grade</th> 
                     <th>Support Level</th> 
                   </tr>`;
-  for (student of students) {
+  for (student of chartStudents) {
     result += `<tr>
     <td>${student.name}</td>
     <td>${student.grade}</td>
