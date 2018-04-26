@@ -177,7 +177,7 @@ function hideWarning() {
 let studentFilterChoice = 0;
 
 function filterChange(event) {
-  event.preventDefault();
+  event.preventDefault ? event.preventDefault() : (event.returnValue = false);
   const filterChoice = event.currentTarget;
   const choiceID = filterChoice.id;
 
@@ -209,7 +209,6 @@ function filterChange(event) {
     default: 
       break;
   }
-  console.log(studentFilterChoice);
 }
 
 function emailChoice() {
@@ -254,7 +253,6 @@ const students =
 
 
 function supportView(event) {
-  // event.preventDefault ? event.preventDefault() : (event.returnValue = false);
   const supportTable = document.getElementById("table-location");
   // clear html of supportTable
   supportTable.innerHTML = "";
@@ -305,15 +303,6 @@ function supportView(event) {
       </tr>`
   }
   result += "</table>";
-  
-  // for (let row = 0; row < students.length; row++) {
-  //   result += "<tr>";
-  //   for (let col = 0; col < students[row].length; col++) {
-  //     result += "<td>"+students[row][col]+ "</td>";
-  //   }
-  //   result += "</tr>";
-  // }
-  // result += "</table>";
 
   const newDiv = document.createElement("div");
   newDiv.innerHTML = result;
